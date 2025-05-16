@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Recipe Sharing App
 
-## Getting Started
+A modern web application for sharing, discovering, and saving cooking recipes. Built with Next.js, TypeScript, Tailwind CSS, and Supabase.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- User authentication (email/password)
+- Create and publish recipes with ingredients and steps
+- Browse and search recipes
+- Like, comment, and save recipes
+- User profiles with personal recipes and favorites
+- Responsive design for all devices
+
+## Tech Stack
+
+- **Frontend**: Next.js 13+ with App Router
+- **Styling**: Tailwind CSS
+- **Authentication & Database**: Supabase
+- **Language**: TypeScript
+- **State Management**: React Hooks
+- **Notifications**: React Hot Toast
+
+## Prerequisites
+
+- Node.js 18+ and npm
+- Supabase account
+- Git
+
+## Setup
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd recipe-app
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a Supabase project and set up the database:
+   - Go to [Supabase](https://supabase.com) and create a new project
+   - Run the SQL commands from `supabase/schema.sql` in the Supabase SQL editor
+   - Get your project URL and anon key from the project settings
+
+4. Create a `.env.local` file in the root directory:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your-project-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+   ```
+
+5. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+recipe-app/
+├── src/
+│   ├── app/                 # Next.js app router pages
+│   ├── components/          # React components
+│   └── lib/                 # Utility functions and types
+├── public/                  # Static assets
+├── supabase/               # Database schema and migrations
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Database Schema
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application uses the following tables:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `recipes`: Stores recipe information
+- `comments`: Stores recipe comments
+- `likes`: Stores recipe likes
+- `saved_recipes`: Stores saved recipes
 
-## Learn More
+See `supabase/schema.sql` for the complete database schema.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork the repository
+2. Create a new branch
+3. Make your changes
+4. Submit a pull request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+      "recipe-app": {
+        "type": "supabase",
+        "config": {
+          "supabaseUrl": "https://elsdqxfwdngavapifhen.supabase.co",
+          "supabaseKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVsc2RxeGZ3ZG5nYXZhcGlmaGVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcyOTg2MzMsImV4cCI6MjA2Mjg3NDYzM30.sSiqynwSddrE28EdCBHzZIC9jLWYx1SyCfaImIwo4Gk"
+        }
+      }
+    }
+  }
